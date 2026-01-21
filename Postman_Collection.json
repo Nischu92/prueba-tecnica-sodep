@@ -1,0 +1,144 @@
+{
+	"info": {
+		"name": "Prueba Tecnica SODEP",
+		"description": "Coleccion de endpoints para el microservicio de clientes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Clientes",
+			"item": [
+				{
+					"name": "Obtener todos los clientes",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6Ik5pY29sYWkgQWxleGFuZGVyIFNjaHVlbGVyIiwidXNlcm5hbWUiOiJuc2NodWxlciIsImFkbWluIjp0cnVlLCJpYXQiOjE1MTYyMzkwMjJ9.3DUz8GpVVK4SG4a6adFTAlqixiazVwNXKgJktqOY3EI"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/clientes",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8080",
+							"path": ["api", "clientes"]
+						}
+					}
+				},
+				{
+					"name": "Obtener cliente por ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6Ik5pY29sYWkgQWxleGFuZGVyIFNjaHVlbGVyIiwidXNlcm5hbWUiOiJuc2NodWxlciIsImFkbWluIjp0cnVlLCJpYXQiOjE1MTYyMzkwMjJ9.3DUz8GpVVK4SG4a6adFTAlqixiazVwNXKgJktqOY3EI"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/clientes/1",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8080",
+							"path": ["api", "clientes", "1"]
+						}
+					}
+				},
+				{
+					"name": "Crear nuevo cliente",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6Ik5pY29sYWkgQWxleGFuZGVyIFNjaHVlbGVyIiwidXNlcm5hbWUiOiJuc2NodWxlciIsImFkbWluIjp0cnVlLCJpYXQiOjE1MTYyMzkwMjJ9.3DUz8GpVVK4SG4a6adFTAlqixiazVwNXKgJktqOY3EI"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nombre\": \"Juan Perez\",\n  \"email\": \"juan.perez@example.com\",\n  \"telefono\": \"595-21-123456\",\n  \"direccion\": \"Asuncion, Paraguay\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/clientes",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8080",
+							"path": ["api", "clientes"]
+						}
+					}
+				},
+				{
+					"name": "Actualizar cliente",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6Ik5pY29sYWkgQWxleGFuZGVyIFNjaHVlbGVyIiwidXNlcm5hbWUiOiJuc2NodWxlciIsImFkbWluIjp0cnVlLCJpYXQiOjE1MTYyMzkwMjJ9.3DUz8GpVVK4SG4a6adFTAlqixiazVwNXKgJktqOY3EI"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nombre\": \"Juan Perez Actualizado\",\n  \"email\": \"juan.nuevo@example.com\",\n  \"telefono\": \"595-21-654321\",\n  \"direccion\": \"Lambare, Paraguay\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/clientes/1",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8080",
+							"path": ["api", "clientes", "1"]
+						}
+					}
+				},
+				{
+					"name": "Eliminar cliente",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6Ik5pY29sYWkgQWxleGFuZGVyIFNjaHVlbGVyIiwidXNlcm5hbWUiOiJuc2NodWxlciIsImFkbWluIjp0cnVlLCJpYXQiOjE1MTYyMzkwMjJ9.3DUz8GpVVK4SG4a6adFTAlqixiazVwNXKgJktqOY3EI"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/clientes/1",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8080",
+							"path": ["api", "clientes", "1"]
+						}
+					}
+				},
+				{
+					"name": "Sincronizar desde API externa",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6Ik5pY29sYWkgQWxleGFuZGVyIFNjaHVlbGVyIiwidXNlcm5hbWUiOiJuc2NodWxlciIsImFkbWluIjp0cnVlLCJpYXQiOjE1MTYyMzkwMjJ9.3DUz8GpVVK4SG4a6adFTAlqixiazVwNXKgJktqOY3EI"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/clientes/sync",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8080",
+							"path": ["api", "clientes", "sync"]
+						}
+					}
+				}
+			]
+		}
+	]
+}
