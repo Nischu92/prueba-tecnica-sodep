@@ -191,12 +191,13 @@ public class ClienteService {
         cliente.setEmail(externalUser.email());
         cliente.setTelefono(externalUser.phone());
 
-        if (externalUser.address() != null) {
+        // Construir direccion completa (pattern matching)
+        if (externalUser.address() instanceof ExternalUserDTO.Address addr) {
             String direccion = String.format("%s %s, %s %s",
-                    externalUser.address().street(),
-                    externalUser.address().suite(),
-                    externalUser.address().city(),
-                    externalUser.address().zipcode());
+                    addr.street(),
+                    addr.suite(),
+                    addr.city(),
+                    addr.zipcode());
             cliente.setDireccion(direccion);
         }
         cliente.setIdExterno(String.valueOf(externalUser.id()));
