@@ -13,7 +13,7 @@ public record ClienteResponseDTO(
         String idExterno,
         LocalDateTime fechaCreacion,
         LocalDateTime fechaActualizacion) {
-            
+
     // Convierte entidad a DTO
     public static ClienteResponseDTO fromEntity(Cliente cliente) {
         return new ClienteResponseDTO(
